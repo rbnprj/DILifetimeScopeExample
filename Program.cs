@@ -39,13 +39,13 @@ namespace DILifetimeScopesExample
             {
                 Console.WriteLine("========== Request 3 ============");
                 serviceProvider.GetService<ITransientServices>().Info();
-                serviceProvider.GetService<IScopedServices>().Info();
+                scope.ServiceProvider.GetService<IScopedServices>().Info();
                 serviceProvider.GetService<ISingletonServices>().Info();
                 Console.WriteLine("========== ========= ============");
 
                 Console.WriteLine("========== Request 4 ============");
                 serviceProvider.GetService<ITransientServices>().Info();
-                serviceProvider.GetService<IScopedServices>().Info();
+                scope.ServiceProvider.GetService<IScopedServices>().Info();
                 serviceProvider.GetService<ISingletonServices>().Info();
                 Console.WriteLine("========== ========= ============");
             }
@@ -54,7 +54,7 @@ namespace DILifetimeScopesExample
             {
                 Console.WriteLine("========== Request 5 ============");
                 serviceProvider.GetService<ITransientServices>().Info();
-                serviceProvider.GetService<IScopedServices>().Info();
+                scope.ServiceProvider.GetService<IScopedServices>().Info();
                 serviceProvider.GetService<ISingletonServices>().Info();
                 Console.WriteLine("========== ========= ============");
             }
